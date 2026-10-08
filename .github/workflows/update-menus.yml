@@ -1,0 +1,50 @@
+name: Päivitä ruokalistat
+
+on:
+  schedule:
+    # UTC-aikaa: n. klo 6 ja 10 Suomen aikaa, ma–la
+    - cron: "0 3,7 * * 1-6"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Hae ruokalistat
+        run: bash fetch-menus.sh
+
+      # Tallennetaan listat repoon. Samalla repossa on jatkuvasti toimintaa,
+      # joten GitHub ei pysäytä ajastusta 60 päivän hiljaisuuden jälkeen.
+      - name: Tallenna listat
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add menus.js
+          git diff --cached --quiet || git commit -m "Päivitä ruokalistat $(date -u +%F)" && git push
+
+      - name: Kokoa sivusto
+        run: |
+          mkdir _site
+          cp index.html menus.js manifest.json icon.svg icon-180.png icon-512.png krokotiili.webp _site/
+          sed -i "s/__VERSION__/$(date +%s)/" _site/index.html
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+      - id: deployment
+        uses: actions/deploy-pages@v4
