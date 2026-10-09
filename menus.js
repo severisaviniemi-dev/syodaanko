@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-09T03:04:15Z",
+  "updated": "2026-10-09T07:08:28Z",
   "restaurants": [
     {
       "id": "0436",
@@ -41,8 +41,8 @@ window.MENUS = {
               "price": "Op 4,67€ / Hk 8,05€ / Vieras 8,05€",
               "items": [
                 "Paahdettua kirjolohta (*, A, G, ILM, L, M)",
-                "Sitruunamajoneesia (A, G, ILM, L)",
-                "Dijon-perunamuusia (*, A, G, ILM, L)"
+                "Tzatsikia (A, G, ILM, L, VS)",
+                "Perunamuusia (*, A, G, ILM, L)"
               ]
             },
             {
@@ -56,7 +56,7 @@ window.MENUS = {
               "name": "Wicked Rabbit kasvisbuffa",
               "price": "Op 5,60 € / Hk 9,50€ / Vieras 12,50€",
               "items": [
-                "Fetapannupizzaa, pinaattia & cashewpähkinää (A, L)"
+                "Fetapannupinsaa, pinaattia & cashewpähkinää (A, VL)"
               ]
             }
           ]
