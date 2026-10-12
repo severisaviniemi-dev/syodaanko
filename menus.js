@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-12T03:05:40Z",
+  "updated": "2026-10-12T07:13:58Z",
   "restaurants": [
     {
       "id": "0436",
