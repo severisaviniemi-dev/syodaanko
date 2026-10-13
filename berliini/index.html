@@ -246,10 +246,20 @@ let me = null;
 for (const s of STORES) if (customPos[s.id]) s.ll = customPos[s.id];
 
 const map = L.map("map", { zoomControl: false, tap: true }).setView([52.530, 13.410], 14);
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+// Karttapohja: OpenStreetMap, ja jos sen tiilet eivät lataudu, vaihdetaan Esriin.
+const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
+let tileErrors = 0;
+osm.on("tileerror", () => {
+  if (++tileErrors !== 4) return;
+  map.removeLayer(osm);
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
+    maxZoom: 19,
+    attribution: "Tiles &copy; Esri",
+  }).addTo(map);
+});
 
 const markers = {};
 
