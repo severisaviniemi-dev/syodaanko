@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-13T03:05:38Z",
+  "updated": "2026-10-13T07:13:14Z",
   "restaurants": [
     {
       "id": "0436",
@@ -15,7 +15,7 @@ window.MENUS = {
               "name": "Kasviskeitto",
               "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
               "items": [
-                "Parsakaalisosekeittoa (*, A, G, ILM, L)",
+                "Juustoista peruna-pinaattisosekeittoa (*, A, G, ILM, L)",
                 "Paahdettuja siemeniä (G, L, M, Veg)"
               ]
             },
@@ -32,7 +32,7 @@ window.MENUS = {
               "price": "Op 2,95 € / Hk 6,19€ / Vieras 6,22€",
               "items": [
                 "Pekonilla ja sipulilla täytettyä uunimakkaraa (A, G, L)",
-                "Dijon-perunamuusia (*, A, G, ILM, L)"
+                "Perunamuusia (*, A, G, ILM, L)"
               ]
             },
             {
@@ -394,32 +394,7 @@ window.MENUS = {
         {
           "date": "2026-10-17",
           "hours": null,
-          "menus": [
-            {
-              "name": "Kasviskeitto",
-              "price": "Opiskelija 1,46 € / Henkilökunta 4,59€ / Vierailija 4,59 €",
-              "items": [
-                "Hernesosekeittoa (*, A, G, ILM, L)",
-                "Paahdettuja siemeniä (G, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "Kasvislounas",
-              "price": "Opiskelija 1,87 € / Henkilökunta 5,03 € / Vierailija 5,03€",
-              "items": [
-                "Välimeren juusto-kasvispataa\n (*, A, G, ILM, L)",
-                "Luomutäysjyväpastaa\n (*, A, ILM, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "Kotiruokalounas",
-              "price": "Opiskelija 2,95 € / Henkilökunta 6,19 € / Vierailija 6,22 €",
-              "items": [
-                "Liha-makaronilaatikkoa (A, L)",
-                "Ketsuppia (G, L, M, Veg)"
-              ]
-            }
-          ]
+          "menus": []
         },
         {
           "date": "2026-10-18",
@@ -459,7 +434,7 @@ window.MENUS = {
               "items": [
                 "Rapeat kalapalat (*, A, G, ILM, L, M)",
                 "Perunamuusia (*, A, G, ILM, L)",
-                "Tartarjogurttia\n (*, A, G, L)"
+                "Jogurttikastike (A, G, L) ()"
               ]
             },
             {
