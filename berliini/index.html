@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Berliinin vaate- ja vintagekaupat kartalla. Merkkaa käydyt, ettei samaan tule mentyä kahdesti.">
+<meta name="theme-color" content="#f4efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16130f" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Berliini">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c2410c'/%3E%3Cpath d='M32 12c-8.3 0-15 6.5-15 14.6C17 37.5 32 52 32 52s15-14.5 15-25.4C47 18.5 40.3 12 32 12z' fill='%23fff'/%3E%3Ccircle cx='32' cy='27' r='6' fill='%23c2410c'/%3E%3C/svg%3E">
+<title>Berliinin kaupat</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+<style>
+  :root {
+    --bg: #f4efe6;
+    --card: #fffdf9;
+    --ink: #1f1a14;
+    --muted: #6f655a;
+    --line: #e2d8c9;
+    --accent: #c2410c;
+    --accent-ink: #ffffff;
+    --done: #3f7d4e;
+    --done-soft: #e3efe5;
+    --font-display: "Bricolage Grotesque", ui-rounded, -apple-system, system-ui, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16130f; --card: #211c17; --ink: #f1eadf; --muted: #a89c8d; --line: #352d25;
+      --accent: #fb923c; --accent-ink: #1a0f06; --done: #6cc282; --done-soft: #1f3324;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16130f; --card: #211c17; --ink: #f1eadf; --muted: #a89c8d; --line: #352d25;
+    --accent: #fb923c; --accent-ink: #1a0f06; --done: #6cc282; --done-soft: #1f3324;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.4 var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    display: flex; flex-direction: column;
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  header {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: calc(10px + env(safe-area-inset-top)) 16px 10px;
+  }
+  h1 {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: 24px; letter-spacing: -0.02em; margin: 0; line-height: 1.1;
+  }
+  .progress { font-size: 14px; color: var(--muted); white-space: nowrap; }
+  .progress b { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .bar { height: 4px; background: var(--line); margin: 0 16px; border-radius: 4px; overflow: hidden; }
+  .bar span { display: block; height: 100%; width: 0; background: var(--done); transition: width .3s; }
+
+  #map { flex: 1 1 55%; min-height: 200px; margin-top: 10px; z-index: 0; }
+  .leaflet-container { background: var(--line); font: inherit; }
+  .leaflet-bottom { bottom: 14px; }
+  @media (min-width: 820px) { .leaflet-bottom { bottom: 0; } }
+
+  .sheet {
+    flex: 1 1 45%;
+    display: flex; flex-direction: column; min-height: 0;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    border-radius: 18px 18px 0 0;
+    margin-top: -14px; position: relative; z-index: 1;
+    box-shadow: 0 -6px 20px rgb(0 0 0 / .08);
+  }
+  .tabs { display: flex; gap: 6px; padding: 12px 16px 8px; }
+  .tab {
+    flex: 1; padding: 8px 6px; border-radius: 999px;
+    border: 1.5px solid var(--line); background: transparent; color: var(--ink);
+    font: 600 14px var(--font-body); cursor: pointer;
+  }
+  .tab[aria-pressed="true"] { background: var(--ink); color: var(--card); border-color: var(--ink); }
+
+  ul { list-style: none; margin: 0; padding: 0 8px calc(12px + env(safe-area-inset-bottom)); overflow-y: auto; flex: 1; }
+  li { border-radius: 14px; }
+  li.sel { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+  .row { display: flex; align-items: center; gap: 12px; padding: 10px 8px; }
+  .info { flex: 1; min-width: 0; cursor: pointer; }
+  .name { font-weight: 650; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .addr { font-size: 13px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .addr .dist { color: var(--accent); font-weight: 600; }
+  li.done .name { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1.5px; }
+
+  .check {
+    flex: none; width: 44px; height: 44px; border-radius: 50%;
+    border: 2px solid var(--line); background: transparent; color: transparent;
+    display: grid; place-items: center; cursor: pointer;
+    transition: background .15s, border-color .15s;
+  }
+  .check svg { width: 22px; height: 22px; }
+  li.done .check { background: var(--done); border-color: var(--done); color: #fff; }
+
+  .empty { padding: 28px 16px; text-align: center; color: var(--muted); }
+
+  .fab {
+    position: absolute; right: 12px; z-index: 500;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--card); color: var(--ink); border: 1px solid var(--line);
+    box-shadow: 0 2px 10px rgb(0 0 0 / .18);
+    display: grid; place-items: center; cursor: pointer;
+  }
+  .fab svg { width: 22px; height: 22px; }
+
+  /* Karttanastat */
+  .pin {
+    width: 30px; height: 30px; border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    background: var(--accent); border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgb(0 0 0 / .35);
+    display: grid; place-items: center;
+  }
+  .pin i { transform: rotate(45deg); color: var(--accent-ink); font: 800 12px var(--font-body); font-style: normal; }
+  .pin.done { background: #9a9187; opacity: .75; }
+  .pin.done i { color: #fff; }
+  .pin.sel { outline: 3px solid var(--ink); outline-offset: 1px; }
+  .me { width: 16px; height: 16px; border-radius: 50%; background: #2563eb; border: 3px solid #fff; box-shadow: 0 0 0 6px rgb(37 99 235 / .25); }
+
+  .leaflet-popup-content-wrapper { background: var(--card); color: var(--ink); border-radius: 14px; }
+  .leaflet-popup-tip { background: var(--card); }
+  .leaflet-popup-content { margin: 12px 14px; min-width: 190px; }
+  .pop-name { font-family: var(--font-display); font-weight: 800; font-size: 18px; line-height: 1.15; }
+  .pop-addr { color: var(--muted); font-size: 13px; margin: 2px 0 10px; }
+  .pop-actions { display: flex; gap: 8px; }
+  .btn {
+    flex: 1; padding: 9px 10px; border-radius: 10px; border: 0; cursor: pointer;
+    font: 650 14px var(--font-body); text-align: center; text-decoration: none;
+  }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); }
+  .btn.ok { background: var(--done-soft); color: var(--done); }
+  .btn.ghost { background: transparent; color: var(--ink) !important; border: 1.5px solid var(--line); }
+  .pop-note { font-size: 12px; color: var(--muted); margin-top: 8px; }
+
+  .toast {
+    position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom)); transform: translateX(-50%);
+    background: var(--ink); color: var(--card); padding: 10px 14px; border-radius: 12px;
+    font-size: 14px; z-index: 1000; display: flex; gap: 12px; align-items: center;
+    box-shadow: 0 6px 20px rgb(0 0 0 / .25);
+  }
+  .toast button { background: none; border: 0; color: var(--accent); font: 700 14px var(--font-body); cursor: pointer; }
+
+  @media (min-width: 820px) {
+    body { flex-direction: row; flex-wrap: wrap; }
+    header, .bar { flex-basis: 100%; }
+    #map { flex: 1 1 auto; height: auto; margin-top: 10px; }
+    .sheet { flex: 0 0 380px; margin: 10px 0 0; border-radius: 0; border-top: 0; border-left: 1px solid var(--line); box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Berliinin kaupat</h1>
+  <div class="progress"><b id="doneCount">0</b> / <span id="totalCount">0</span> käyty</div>
+</header>
+<div class="bar"><span id="barFill"></span></div>
+
+<div id="map" style="position:relative">
+  <button class="fab" id="locate" style="top:12px" title="Näytä sijaintini" aria-label="Näytä sijaintini">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+  </button>
+  <button class="fab" id="fitAll" style="top:64px" title="Näytä kaikki" aria-label="Näytä kaikki kaupat">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+  </button>
+</div>
+
+<section class="sheet">
+  <div class="tabs" role="group" aria-label="Suodata">
+    <button class="tab" data-f="todo" aria-pressed="true">Käymättä</button>
+    <button class="tab" data-f="done" aria-pressed="false">Käyty</button>
+    <button class="tab" data-f="all" aria-pressed="false">Kaikki</button>
+  </div>
+  <ul id="list"></ul>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+// Koordinaatit on arvioitu osoitteen perusteella. Jos nasta on vähän sivussa,
+// sen voi raahata oikeaan kohtaan (pitkä painallus → raahaa), ja sijainti muistetaan.
+const STORES = [
+  { id: "wrstbhvr",  name: "WRSTBHVR",                    addr: "Neue Schönhauser Str. 3-5, Mitte",   ll: [52.52480, 13.40480] },
+  { id: "nude",      name: "Nude Project",                addr: "Alte Schönhauser Str. 28, Mitte",    ll: [52.52715, 13.40720] },
+  { id: "civilist",  name: "Civilist",                    addr: "Brunnenstr. 13, Mitte",              ll: [52.53070, 13.40120] },
+  { id: "firmament", name: "Firmament",                   addr: "Linienstr. 40, Mitte",               ll: [52.52770, 13.40860] },
+  { id: "dns",       name: "Das Neue Schwarz",            addr: "Mulackstr. 38, Mitte",               ll: [52.52755, 13.40440] },
+  { id: "yummy-b",   name: "Yummy Vintage Boutique",      addr: "Gormannstr. 19a, Mitte",             ll: [52.52800, 13.40300] },
+  { id: "pnw",       name: "PICKNWEIGHT",                 addr: "Alte Schönhauser Str. 30, Mitte",    ll: [52.52740, 13.40760] },
+  { id: "hardt",     name: "HARDT",                       addr: "Rosa-Luxemburg-Str. 15, Mitte",      ll: [52.52590, 13.41050] },
+  { id: "kdg",       name: "Kauf Dich Glücklich",         addr: "Rosenthaler Str. 17, Mitte",         ll: [52.52690, 13.40300] },
+  { id: "lulu",      name: "lululemon Berlin Mitte",      addr: "Rosenthaler Str. 40-41, Mitte",      ll: [52.52440, 13.40220] },
+  { id: "oysho",     name: "Oysho",                       addr: "Hackescher Markt 2-3, Mitte",        ll: [52.52300, 13.40260] },
+  { id: "salbazaar", name: "Salbazaar Schatzy",           addr: "Mulackstr. 34, Mitte",               ll: [52.52740, 13.40500] },
+  { id: "rodeo",     name: "Rodeo Vintage",               addr: "Schönhauser Allee 129, Prenzlauer Berg", ll: [52.54480, 13.41160] },
+  { id: "ostories",  name: "& Other Stories",             addr: "Neue Schönhauser Str. 15, Mitte",    ll: [52.52565, 13.40570] },
+  { id: "stetson",   name: "Stetson",                     addr: "Münzstr. 21, Mitte",                 ll: [52.52530, 13.40830] },
+  { id: "supreme",   name: "Supreme",                     addr: "Torstr. 74, Mitte",                  ll: [52.52920, 13.40330] },
+  { id: "arys",      name: "ARYS Store",                  addr: "Kollwitzstr. 51, Prenzlauer Berg",   ll: [52.53760, 13.41830] },
+  { id: "storex",    name: "The Store X",                 addr: "Torstr. 1 (Soho House), Mitte",      ll: [52.52865, 13.41680] },
+  { id: "filippak",  name: "Filippa K",                   addr: "Alte Schönhauser Str. 11, Mitte",    ll: [52.52610, 13.40690] },
+  { id: "langbrett", name: "Langbrett",                   addr: "Kastanienallee 44, Prenzlauer Berg", ll: [52.53560, 13.40640] },
+  { id: "paulsb",    name: "Paul's Boutique",             addr: "Oderberger Str. 47, Prenzlauer Berg", ll: [52.53960, 13.40700] },
+  { id: "jimmys",    name: "Jimmys",                      addr: "Kastanienallee 3, Prenzlauer Berg",  ll: [52.54010, 13.41080] },
+  { id: "yours",     name: "Yours (ent. Fast Neu)",       addr: "Sredzkistr. 36, Prenzlauer Berg",    ll: [52.53870, 13.41720] },
+  { id: "wertvoll",  name: "Wertvoll",                    addr: "Marienburger Str. 39, Prenzlauer Berg", ll: [52.53400, 13.42430] },
+  { id: "soeur",     name: "Soeur",                       addr: "Marienburger Str. 24, Prenzlauer Berg", ll: [52.53350, 13.42200] },
+  { id: "titus",     name: "Titus",                       addr: "Karl-Liebknecht-Str. 9, Mitte",      ll: [52.52250, 13.40950] },
+  { id: "paulsc",    name: "Paul's Chapter",              addr: "Torstr. 70, Mitte",                  ll: [52.52925, 13.40420] },
+  { id: "yummy-s",   name: "Yummy Vintage Store",         addr: "Bürknerstr. 12, Neukölln",           ll: [52.49360, 13.42330] },
+];
+
+const KEY_DONE = "berliini.done.v1";
+const KEY_POS = "berliini.pos.v1";
+const KEY_FILTER = "berliini.filter.v1";
+
+function load(key, fallback) {
+  try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch { return fallback; }
+}
+function save(key, val) {
+  try { localStorage.setItem(key, JSON.stringify(val)); } catch {}
+}
+
+const done = load(KEY_DONE, {});           // id -> aikaleima
+const customPos = load(KEY_POS, {});       // id -> [lat, lng]
+let filter = load(KEY_FILTER, "todo");
+let selected = null;
+let me = null;
+
+for (const s of STORES) if (customPos[s.id]) s.ll = customPos[s.id];
+
+const map = L.map("map", { zoomControl: false, tap: true }).setView([52.530, 13.410], 14);
+L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+  maxZoom: 20, subdomains: "abcd",
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+}).addTo(map);
+
+const markers = {};
+
+function icon(s) {
+  const cls = ["pin", done[s.id] ? "done" : "", selected === s.id ? "sel" : ""].join(" ");
+  const label = done[s.id] ? "✓" : s.name.replace(/^[^A-Za-z0-9]+/, "").charAt(0).toUpperCase();
+  return L.divIcon({ className: "", html: `<div class="${cls}"><i>${label}</i></div>`, iconSize: [30, 30], iconAnchor: [15, 30], popupAnchor: [0, -28] });
+}
+
+function mapsUrl(s) {
+  return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(s.name + ", " + s.addr.replace(/,[^,]*$/, "") + ", Berlin");
+}
+
+function popupHtml(s) {
+  const isDone = !!done[s.id];
+  const when = isDone ? new Date(done[s.id]).toLocaleDateString("fi-FI", { day: "numeric", month: "numeric", year: "numeric" }) : "";
+  return `
+    <div class="pop-name">${s.name}</div>
+    <div class="pop-addr">${s.addr}</div>
+    <div class="pop-actions">
+      <button class="btn ${isDone ? "ok" : "primary"}" data-toggle="${s.id}">${isDone ? "✓ Käyty" : "Merkkaa käydyksi"}</button>
+      <a class="btn ghost" href="${mapsUrl(s)}" target="_blank" rel="noopener">Reitti</a>
+    </div>
+    ${isDone ? `<div class="pop-note">Käyty ${when}. Napauta uudestaan jos haluat perua.</div>` : `<div class="pop-note">Nasta väärässä kohdassa? Raahaa se oikeaan paikkaan.</div>`}`;
+}
+
+for (const s of STORES) {
+  const m = L.marker(s.ll, { icon: icon(s), draggable: true, autoPan: true, title: s.name }).addTo(map);
+  m.bindPopup(() => popupHtml(s));
+  m.on("click", () => select(s.id, false));
+  m.on("dragend", () => {
+    const p = m.getLatLng();
+    s.ll = [+p.lat.toFixed(6), +p.lng.toFixed(6)];
+    customPos[s.id] = s.ll;
+    save(KEY_POS, customPos);
+    renderList();
+    showToast(`${s.name}: sijainti tallennettu`);
+  });
+  markers[s.id] = m;
+}
+
+map.on("popupopen", e => {
+  const btn = e.popup.getElement().querySelector("[data-toggle]");
+  if (btn) btn.addEventListener("click", () => { toggle(btn.dataset.toggle); });
+});
+map.on("popupclose", () => { if (selected) { const id = selected; selected = null; refreshMarker(id); renderList(); } });
+
+function refreshMarker(id) {
+  const s = STORES.find(x => x.id === id);
+  markers[id].setIcon(icon(s));
+  markers[id].setZIndexOffset(selected === id ? 1000 : done[id] ? -100 : 0);
+}
+
+function toggle(id) {
+  const s = STORES.find(x => x.id === id);
+  const was = done[id];
+  if (was) delete done[id]; else done[id] = Date.now();
+  save(KEY_DONE, done);
+  refreshMarker(id);
+  if (markers[id].isPopupOpen()) markers[id].setPopupContent(popupHtml(s));
+  renderList();
+  renderProgress();
+  showToast(was ? `${s.name}: merkintä poistettu` : `${s.name} käyty ✓`, () => {
+    if (was) done[id] = was; else delete done[id];
+    save(KEY_DONE, done);
+    refreshMarker(id);
+    if (markers[id].isPopupOpen()) markers[id].setPopupContent(popupHtml(s));
+    renderList(); renderProgress();
+  });
+}
+
+function select(id, fly) {
+  const prev = selected;
+  selected = id;
+  if (prev && prev !== id) refreshMarker(prev);
+  refreshMarker(id);
+  if (fly) {
+    const s = STORES.find(x => x.id === id);
+    map.flyTo(s.ll, Math.max(map.getZoom(), 16), { duration: 0.5 });
+    setTimeout(() => markers[id].openPopup(), 520);
+  }
+  renderList();
+}
+
+function dist(a, b) {
+  const R = 6371000, r = Math.PI / 180;
+  const dLat = (b[0] - a[0]) * r, dLng = (b[1] - a[1]) * r;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+function fmtDist(m) { return m < 1000 ? `${Math.round(m / 10) * 10} m` : `${(m / 1000).toFixed(1).replace(".", ",")} km`; }
+
+const listEl = document.getElementById("list");
+const check = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`;
+
+function renderList() {
+  let items = STORES.filter(s => filter === "all" || (filter === "done") === !!done[s.id]);
+  if (me) items.sort((a, b) => dist(me, a.ll) - dist(me, b.ll));
+  else if (filter === "done") items.sort((a, b) => done[b.id] - done[a.id]);
+  else items.sort((a, b) => a.name.localeCompare(b.name, "de"));
+
+  if (!items.length) {
+    listEl.innerHTML = `<li class="empty">${filter === "todo" ? "Kaikki kaupat käyty! 🎉" : "Ei vielä yhtään käytyä kauppaa."}</li>`;
+    return;
+  }
+  listEl.innerHTML = items.map(s => `
+    <li class="${done[s.id] ? "done" : ""} ${selected === s.id ? "sel" : ""}" data-id="${s.id}">
+      <div class="row">
+        <div class="info" data-go="${s.id}">
+          <div class="name">${s.name}</div>
+          <div class="addr">${me ? `<span class="dist">${fmtDist(dist(me, s.ll))}</span> · ` : ""}${s.addr}</div>
+        </div>
+        <button class="check" data-toggle="${s.id}" aria-label="${done[s.id] ? "Poista käyty-merkintä" : "Merkkaa käydyksi"}: ${s.name}" aria-pressed="${!!done[s.id]}">${check}</button>
+      </div>
+    </li>`).join("");
+}
+
+listEl.addEventListener("click", e => {
+  const t = e.target.closest("[data-toggle]");
+  if (t) { toggle(t.dataset.toggle); return; }
+  const g = e.target.closest("[data-go]");
+  if (g) select(g.dataset.go, true);
+});
+
+function renderProgress() {
+  const n = Object.keys(done).filter(id => STORES.some(s => s.id === id)).length;
+  document.getElementById("doneCount").textContent = n;
+  document.getElementById("totalCount").textContent = STORES.length;
+  document.getElementById("barFill").style.width = (100 * n / STORES.length) + "%";
+}
+
+function setFilter(f) {
+  filter = f;
+  save(KEY_FILTER, f);
+  for (const b of document.querySelectorAll(".tab")) b.setAttribute("aria-pressed", b.dataset.f === f);
+  renderList();
+}
+for (const b of document.querySelectorAll(".tab")) b.addEventListener("click", () => setFilter(b.dataset.f));
+
+function fitAll(core) {
+  // Aluksi näytetään Mitte + Prenzlauer Berg; Neuköllnin kauppa jää ruudun ulkopuolelle.
+  const pts = STORES.filter(s => !core || s.ll[0] > 52.51).map(s => s.ll);
+  map.fitBounds(L.latLngBounds(pts), { padding: [30, 30] });
+}
+document.getElementById("fitAll").addEventListener("click", () => fitAll(false));
+
+let meMarker = null;
+document.getElementById("locate").addEventListener("click", () => {
+  if (!navigator.geolocation) { showToast("Sijainti ei ole käytettävissä"); return; }
+  navigator.geolocation.getCurrentPosition(p => {
+    me = [p.coords.latitude, p.coords.longitude];
+    if (!meMarker) meMarker = L.marker(me, { icon: L.divIcon({ className: "", html: '<div class="me"></div>', iconSize: [16, 16] }), interactive: false, keyboard: false }).addTo(map);
+    else meMarker.setLatLng(me);
+    map.flyTo(me, 16, { duration: 0.6 });
+    renderList();
+    showToast("Lista järjestetty lähimmästä alkaen");
+  }, () => showToast("Sijaintia ei saatu"), { enableHighAccuracy: true, timeout: 10000 });
+});
+
+let toastTimer;
+function showToast(msg, undo) {
+  document.querySelector(".toast")?.remove();
+  clearTimeout(toastTimer);
+  const t = document.createElement("div");
+  t.className = "toast";
+  t.innerHTML = `<span></span>`;
+  t.firstChild.textContent = msg;
+  if (undo) {
+    const b = document.createElement("button");
+    b.textContent = "Peru";
+    b.onclick = () => { undo(); t.remove(); };
+    t.appendChild(b);
+  }
+  document.body.appendChild(t);
+  toastTimer = setTimeout(() => t.remove(), 3500);
+}
+
+setFilter(filter);
+renderProgress();
+fitAll(true);
+</script>
+</body>
+</html>
