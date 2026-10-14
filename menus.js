@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-14T03:16:11Z",
+  "updated": "2026-10-14T07:29:41Z",
   "restaurants": [
     {
       "id": "0436",
@@ -39,16 +39,14 @@ window.MENUS = {
               "price": "Op 4,67€ / Hk 8,05€ / Vieras 8,05€",
               "items": [
                 "Briossi BRG, Crispy fish, aiolia & pikkelöityä kurkkua (A, ILM, L)",
-                "Maalaisranskalaisia (G, L, M, Veg)",
-                "Piparjuurimajoneesia (A, G, L, M)"
+                "Maalaisranskalaisia (G, L, M, Veg)"
               ]
             },
             {
               "name": "Pieni makea ihanuus",
               "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
               "items": [
-                "Puutarhamarja-ruismurupaistosta (A, L, M, Veg)",
-                "Vegaanista vaniljakastiketta (A, G, L, M, Veg)"
+                "Puutarhamarja-ruismurupaistosta & vaniljakastiketta (A, L)"
               ]
             }
           ]
