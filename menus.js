@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-16T03:16:18Z",
+  "updated": "2026-10-16T07:26:17Z",
   "restaurants": [
     {
       "id": "0436",
@@ -15,7 +15,7 @@ window.MENUS = {
               "name": "Kasviskeitto",
               "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
               "items": [
-                "Linssikeittoa Thai Style (*, G, ILM, L, M, Veg, VS)",
+                "Puutarhurin juuressosekeittoa (*, A, L, M, Veg)",
                 "Paahdettuja siemeniä (G, L, M, Veg)"
               ]
             },
@@ -24,8 +24,7 @@ window.MENUS = {
               "price": "Op 1,87 € / Hk 5,03€ / Vieras 5,03€",
               "items": [
                 "Pinaattiohukaisia (*, A, ILM, L)",
-                "Hillottua puolukkaa (G, L, M, Veg)",
-                "Paahdettua perunaa (*, G, ILM, L, M, Veg)"
+                "Hillottua puolukkaa (G, L, M, Veg)"
               ]
             },
             {
@@ -39,7 +38,7 @@ window.MENUS = {
               "name": "Pieni makea ihanuus",
               "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
               "items": [
-                "Banaanirahkaa (A, G, L)"
+                "Keksi-kinuskirahkaa (A, L)"
               ]
             }
           ]
