@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-19T03:17:58Z",
+  "updated": "2026-10-19T07:36:56Z",
   "restaurants": [
     {
       "id": "0436",
@@ -9,7 +9,7 @@ window.MENUS = {
       "days": [
         {
           "date": "2026-10-19",
-          "hours": "10:30–14:00",
+          "hours": "10:30–14:30",
           "menus": [
             {
               "name": "Kasviskeitto",
@@ -56,7 +56,7 @@ window.MENUS = {
         },
         {
           "date": "2026-10-20",
-          "hours": "10:30–14:00",
+          "hours": "10:30–14:30",
           "menus": [
             {
               "name": "Kasviskeitto",
@@ -104,7 +104,7 @@ window.MENUS = {
         },
         {
           "date": "2026-10-21",
-          "hours": "10:30–14:00",
+          "hours": "10:30–14:30",
           "menus": [
             {
               "name": "Kasviskeitto",
@@ -160,7 +160,7 @@ window.MENUS = {
         },
         {
           "date": "2026-10-22",
-          "hours": "10:30–14:00",
+          "hours": "10:30–14:30",
           "menus": [
             {
               "name": "Kasviskeitto",
@@ -220,7 +220,7 @@ window.MENUS = {
         },
         {
           "date": "2026-10-23",
-          "hours": "10:30–13:30",
+          "hours": "10:30–14:00",
           "menus": [
             {
               "name": "Kasviskeitto",
@@ -284,7 +284,7 @@ window.MENUS = {
       "days": [
         {
           "date": "2026-10-19",
-          "hours": "10:30–14:00",
+          "hours": "10:30–14:30",
           "menus": [
             {
               "name": "Kasviskeitto",
@@ -332,7 +332,7 @@ window.MENUS = {
         },
         {
           "date": "2026-10-20",
-          "hours": "10:30–14:00",
+          "hours": "10:30–14:30",
           "menus": [
             {
               "name": "Kasviskeitto",
@@ -379,7 +379,7 @@ window.MENUS = {
         },
         {
           "date": "2026-10-21",
-          "hours": "10:30–14:00",
+          "hours": "10:30–14:30",
           "menus": [
             {
               "name": "Kasviskeitto",
@@ -435,7 +435,7 @@ window.MENUS = {
         },
         {
           "date": "2026-10-22",
-          "hours": "10:30–14:00",
+          "hours": "10:30–14:30",
           "menus": [
             {
               "name": "Kasviskeitto",
@@ -476,7 +476,7 @@ window.MENUS = {
         },
         {
           "date": "2026-10-23",
-          "hours": "10:30–13:30",
+          "hours": "10:30–14:00",
           "menus": [
             {
               "name": "Kasviskeitto",
@@ -525,7 +525,7 @@ window.MENUS = {
         },
         {
           "date": "2026-10-24",
-          "hours": null,
+          "hours": "11:00–13:30",
           "menus": [
             {
               "name": "Kasviskeitto",
