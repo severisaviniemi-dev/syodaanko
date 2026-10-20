@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-20T03:17:45Z",
+  "updated": "2026-10-20T07:30:02Z",
   "restaurants": [
     {
       "id": "0436",
@@ -15,7 +15,7 @@ window.MENUS = {
               "name": "Kasviskeitto",
               "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
               "items": [
-                " Tandoorilla maustettua bataatti-omenakeittoa (*, A, G, ILM, L, M, Veg)",
+                " Tandoorilla maustettua porkkana-omenakeittoa (*, A, G, ILM, L, M, Veg)",
                 "Paahdettuja siemeniä (G, L, M, Veg)"
               ]
             },
