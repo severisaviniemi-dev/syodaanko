@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-22T03:18:06Z",
+  "updated": "2026-10-22T07:33:01Z",
   "restaurants": [
     {
       "id": "0436",
@@ -15,8 +15,7 @@ window.MENUS = {
               "name": "Kasviskeitto",
               "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
               "items": [
-                "Punajuurisosekeittoa (*, A, G, ILM, L, M, Veg)",
-                "Paahdettuja siemeniä (G, L, M, Veg)"
+                "Pinaattikeittoa (*, A, ILM, L)"
               ]
             },
             {
