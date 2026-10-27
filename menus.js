@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-27T03:20:06Z",
+  "updated": "2026-10-27T07:35:09Z",
   "restaurants": [
     {
       "id": "0436",
@@ -229,7 +229,7 @@ window.MENUS = {
               "name": "Kasviskeitto",
               "price": "Opiskelija 1,46 € / Henkilökunta 4,59€ / Vierailija 4,59 €",
               "items": [
-                "Bataattikeittoa (*, A, G, L)",
+                "Kurpitsa-porkkana sosekeittoa (*, A, G, L)",
                 "Paahdettuja siemeniä (G, L, M, Veg)"
               ]
             },
@@ -237,8 +237,8 @@ window.MENUS = {
               "name": "Kasvislounas",
               "price": "Opiskelija 1,87 € / Henkilökunta 5,03 € / Vierailija 5,03€",
               "items": [
-                "Vehnätortillat (A, L, M, Veg)",
-                "Mausteista paputäytettä (*, A, ILM, L, M, Veg, VS)"
+                "Mausteista papukastiketta (*, A, ILM, L, M, Veg, VS)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
               ]
             },
             {
