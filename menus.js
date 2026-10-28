@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-28T03:27:57Z",
+  "updated": "2026-10-28T07:44:06Z",
   "restaurants": [
     {
       "id": "0436",
@@ -39,7 +39,7 @@ window.MENUS = {
               "name": "Pieni makea ihanuus",
               "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
               "items": [
-                "Suklaamoussea ja paahdettua valkosuklaata (A, G)"
+                "Omena-puolukkapiirakkaa & kinuskikermavaahtoa  (A, L)"
               ]
             },
             {
