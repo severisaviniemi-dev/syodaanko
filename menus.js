@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-29T03:30:03Z",
+  "updated": "2026-10-29T07:46:02Z",
   "restaurants": [
     {
       "id": "0436",
@@ -15,7 +15,7 @@ window.MENUS = {
               "name": "Kasviskeitto",
               "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
               "items": [
-                "Puutarhurin juuressosekeittoa (*, A, L)",
+                "Kukkakaalisosekeittoa (*, A, G, ILM, L)",
                 "Paahdettuja siemeniä (G, L, M, Veg)"
               ]
             },
@@ -40,14 +40,14 @@ window.MENUS = {
               "items": [
                 "Paahdettua kirjolohta (*, A, G, ILM, L, M)",
                 "Sitruunamajoneesia (A, G, ILM, L)",
-                "Dijon-perunamuusia (*, A, G, ILM, L)"
+                "Perunamuusia (*, A, G, ILM, L)"
               ]
             },
             {
               "name": "Pieni makea ihanuus",
               "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
               "items": [
-                "Mariannerahkaa (A, L)"
+                "Suklaamoussea & paahdettua valkosuklaata (A, G)"
               ]
             },
             {
