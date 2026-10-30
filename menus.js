@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-30T03:29:32Z",
+  "updated": "2026-10-30T07:45:14Z",
   "restaurants": [
     {
       "id": "0436",
@@ -45,7 +45,7 @@ window.MENUS = {
               "name": "Pieni makea ihanuus",
               "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
               "items": [
-                "Limeposset (A, G, L)"
+                "Mariannerahkaa (A, L)"
               ]
             },
             {
@@ -101,7 +101,7 @@ window.MENUS = {
               "items": [
                 "Currymaustettu broilerinkoipi (G, L, M)",
                 "Sriracha-gurttikastiketta (*, A, G, L, M, Veg)",
-                "Paahdettua perunaa (*, G, ILM, L, M, Veg)"
+                "Tummaa riisiä (*, G, L, M, Veg)"
               ]
             },
             {
