@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-10-31T07:39:47Z",
+  "updated": "2026-11-02T03:39:14Z",
   "restaurants": [
     {
       "id": "0436",
@@ -8,12 +8,251 @@ window.MENUS = {
       "url": "https://www.compass-group.fi/ravintolat-ja-ruokalistat/foodco/kaupungit/kuopio/ita-suomen-yliopistocanthia/",
       "days": [
         {
-          "date": "2026-10-31",
+          "date": "2026-11-02",
+          "hours": "10:30–14:30",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
+              "items": [
+                "Savujuustokeittoa (A, G, ILM, L)",
+                "Paahdettuja siemeniä (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Op 1,87 € / Hk 5,03€ / Vieras 5,03€",
+              "items": [
+                "Palermon pastavuokaa mifulla (*, A, ILM, L)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Op 2,95 € / Hk 6,19€ / Vieras 6,22€",
+              "items": [
+                "Broileripyöryköitä (*, A, L, M, VS)",
+                "Omenalla maustettua currykastiketta (*, A, G, ILM, L)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Erikoisannos",
+              "price": "Op 4,67€ / Hk 8,05€ / Vieras 8,05€",
+              "items": [
+                "Paahdettua kirjolohta teriyakikastikkeessa\n (*, A, G, ILM, L, M, VS)",
+                "Savupaprikalla paahdettuja perunoita (*, G, ILM, L, M, Veg, VS)"
+              ]
+            },
+            {
+              "name": "Pieni makea ihanuus",
+              "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
+              "items": [
+                "Mansikkamoussea\n (A, G, L, M, Veg)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "hours": "10:30–14:30",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
+              "items": [
+                "Juustoista kasvissosekeittoa (*, A, G, ILM, L)",
+                "Paahdettuja siemeniä (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Op 1,87 € / Hk 5,03€ / Vieras 5,03€",
+              "items": [
+                "Seitanpataa Stifado (*, A, ILM, L, M, Veg, VS)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Op 2,95 € / Hk 6,19€ / Vieras 6,22€",
+              "items": [
+                "Kinkkukiusausta (*, A, G, ILM, L)"
+              ]
+            },
+            {
+              "name": "Erikoisannos",
+              "price": "Op 4,67€ / Hk 8,05€ / Vieras 8,05€",
+              "items": [
+                "Rapeaa tacomaustettua broileria - Taco Fried Chicken (A, G, L, M)",
+                "Valkosipuli-lohkoperunoita (A, G, ILM, L, M, Veg, VS)",
+                "Ranch-kastiketta (A, G, L, M, Veg, VS)"
+              ]
+            },
+            {
+              "name": "Pieni makea ihanuus",
+              "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
+              "items": [
+                "Päärynä-jogurttipannacottaa (A, G, L)"
+              ]
+            },
+            {
+              "name": "Wicked Rabbit kasvisbuffa",
+              "price": "Op 5,60 € / Hk 9,50€ / Vieras 12,50€",
+              "items": [
+                "Ricottajuustoa, rigatonipastaa ja pistaasia (A, VS)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "hours": "10:30–14:30",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
+              "items": [
+                "Luomuohrasuurimopuuroa\n (*, A, ILM, L)",
+                "Mehukeittoa (G, L, M, Veg)",
+                "Edamjuustoa (A, G, L)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Op 1,87 € / Hk 5,03€ / Vieras 5,03€",
+              "items": [
+                "Tofua, kasviksia ja pähkinää -Tahu goreng Indonesia (*, A, G, ILM, L, M, Veg, VS)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Op 2,95 € / Hk 6,19€ / Vieras 6,22€",
+              "items": [
+                "Lindströminpihvejä (*, G, L, M)",
+                "Sipulikastiketta (*, A, G, ILM, L)",
+                "Persiljaperunoita (*, A, G, ILM, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Pieni makea ihanuus",
+              "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
+              "items": [
+                "Puutarhamarja-ruismurupaistosta (A, L, M, Veg)",
+                "Vaniljakastiketta (A, G, L)"
+              ]
+            },
+            {
+              "name": "Wicked Rabbit kasvisbuffa",
+              "price": "Op 5,60 € / Hk 9,50€ / Vieras 12,50€",
+              "items": [
+                "Briossi BRG, mausteista kanatonta täytettä ja chimichurria (A, L, Veg, VS)",
+                "Savupaprikalla paahdettuja perunoita (*, G, ILM, L, M, Veg, VS)",
+                "Amerikkalaista chilimajoneesia\n (A, G, L, M, Veg)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "hours": "10:30–14:30",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
+              "items": [
+                "Vegaanista hernesosekeittoa (*, A, G, ILM, L, M, Veg)",
+                "Paahdettuja siemeniä (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Op 1,87 € / Hk 5,03€ / Vieras 5,03€",
+              "items": [
+                "Halloumia mausteisessa tomaatti-jogurttikastikkeessa - Shahi Paneer (*, A, G, ILM, VS)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Op 2,95 € / Hk 6,19€ / Vieras 6,22€",
+              "items": [
+                "Rapeat kalapalat (*, A, G, ILM, L, M)",
+                "Tartarjogurttia\n (*, A, G, L)",
+                "Paahdettua perunaa (*, G, ILM, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Pieni makea ihanuus",
+              "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
+              "items": [
+                "Suklaamoussea, kinuskia ja pähkinää (A, G, L)"
+              ]
+            },
+            {
+              "name": "Wicked Rabbit kasvisbuffa",
+              "price": "Op 5,60 € / Hk 9,50€ / Vieras 12,50€",
+              "items": [
+                "Butter Mifua (A, G, ILM, L, VS)",
+                "Basmatiriisiä (G, L, M, Veg)",
+                "Pitaleipä (A, L, M, Veg)",
+                "Harissajogurttia\n (A, G, ILM, L)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-06",
+          "hours": "10:30–14:00",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
+              "items": [
+                "Palsternakkasosekeittoa (*, A, ILM, L, M, Veg)",
+                "Paahdettuja siemeniä (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Op 1,87 € / Hk 5,03€ / Vieras 5,03€",
+              "items": [
+                "Linssipihvejä (*, A, G, ILM, L)",
+                "Piparjuurimajoneesia (A, G, L, M, Veg)",
+                "Paahdettua perunaa (*, G, ILM, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Op 2,95 € / Hk 6,19€ / Vieras 6,22€",
+              "items": [
+                "Tulista ja aromaattista kanacurrya - Madras Chicken (*, A, G, ILM, L, VS)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Pieni makea ihanuus",
+              "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
+              "items": [
+                "Hedelmärahkaa (A, G, L)"
+              ]
+            },
+            {
+              "name": "Wicked Rabbit kasvisbuffa",
+              "price": "Op 5,60 € / Hk 9,50€ / Vieras 12,50€",
+              "items": [
+                "Halloumipizzaa, semikuivattua tomaattia ja pestoa\n (A, VL, VS)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-07",
           "hours": null,
           "menus": []
         },
         {
-          "date": "2026-11-01",
+          "date": "2026-11-08",
           "hours": null,
           "menus": []
         }
@@ -26,12 +265,278 @@ window.MENUS = {
       "url": "https://www.compass-group.fi/ravintolat-ja-ruokalistat/foodco/kaupungit/kuopio/ita-suomen-yliopistosnellmania/",
       "days": [
         {
-          "date": "2026-10-31",
-          "hours": "11:00–13:30",
-          "menus": []
+          "date": "2026-11-02",
+          "hours": "10:30–14:30",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Opiskelija 1,46 € / Henkilökunta 4,59€ / Vierailija 4,59 €",
+              "items": [
+                "Juustoista peruna-pinaattisosekeittoa\n (*, A, G, ILM, L)",
+                "Paahdettuja siemeniä (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Opiskelija 1,87 € / Henkilökunta 5,03 € / Vierailija 5,03€",
+              "items": [
+                "Luomutofua ja kasviksia teriyakikastikkeessa (*, A, G, ILM, L, M, Veg, VS)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Opiskelija 2,95 € / Henkilökunta 6,19 € / Vierailija 6,22 €",
+              "items": [
+                "Kylmäsavukirjolohikiusausta (*, A, G, ILM, L)"
+              ]
+            },
+            {
+              "name": "Annosruoka",
+              "price": "Opiskelija 5,60 € / Henkilökunta 9,05 € / Vierailija 12,50 €",
+              "items": [
+                "Rapeaa kanaa korealaisittain - Chicken Gochujang (A, L, M)",
+                "Limemajoneesia (A, G, L)",
+                "Paistettua nuudelia, kasviksia ja pähkinää (A, L, M)",
+                "Mango-sitruunashotti (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Pieni makea ihana",
+              "price": "Opiskelija 0,66€ / Henkilökunta 0,66 € / Vierailija 1,40 €",
+              "items": [
+                "Vaahtokarkkirahkaa & kinuskia (A, G, L)"
+              ]
+            }
+          ]
         },
         {
-          "date": "2026-11-01",
+          "date": "2026-11-03",
+          "hours": "10:30–14:30",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Opiskelija 1,46 € / Henkilökunta 4,59€ / Vierailija 4,59 €",
+              "items": [
+                "Parsakaalisosekeittoa (*, A, G, ILM, L)",
+                "Paahdettuja siemeniä (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Opiskelija 1,87 € / Henkilökunta 5,03 € / Vierailija 5,03€",
+              "items": [
+                "Paneer Koseli -leipäjuustokastiketta (*, A, G, ILM, L, VS)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Opiskelija 2,95 € / Henkilökunta 6,19 € / Vierailija 6,22€",
+              "items": [
+                "Pekoni-juustokuorrutettua uunimakkaraa (A, G, L)",
+                "Dijon-perunamuusia (*, A, G, ILM, L)"
+              ]
+            },
+            {
+              "name": "Keittolounas",
+              "price": "Opiskelija 2,95 € / Henkilökunta 6,19 € / Vierailija 6,22€",
+              "items": [
+                "Jauhelihakeittoa\n (*, A, G, ILM, L, M)"
+              ]
+            },
+            {
+              "name": "Annosruoka",
+              "price": "Opiskelija 5,60 € / Henkilökunta 9,05 € / Vierailija 12,50 €",
+              "items": [
+                "Voissa paistettuja muikkuja\n (A, ILM, L)",
+                "Sitruuna-aiolia (A, G, ILM, L, M, Veg, VS)",
+                "Yrteillä maustettua perunamuusia (*, A, G, ILM, L)",
+                "Satokauden kasviksia (G, L, M, Veg)",
+                "Mango-sitruunashotti (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Pieni makea ihana",
+              "price": "Opiskelija 0,66€ / Henkilökunta 0,66 € / Vierailija 1,40 €",
+              "items": [
+                "Passionpannacottaa (A, G, L)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "hours": "10:30–14:30",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Opiskelija 1,46 € / Henkilökunta 4,59€ / Vierailija 4,59 €",
+              "items": [
+                "Puutarhurin juuressosekeittoa (*, A, L, M, Veg)",
+                "Paahdettuja siemeniä (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Opiskelija 1,87 € / Henkilökunta 5,03 € / Vierailija 5,03€",
+              "items": [
+                "Pennepastaa, vuohenjuustoa ja tomaattia (*, A, ILM, L, VS)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Opiskelija 2,95 € / Henkilökunta 6,19 € / Vierailija 6,22 €",
+              "items": [
+                "Tandoorikanaa jogurttikastikkeessa (*, A, G, L)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Annosruoka",
+              "price": "Opiskelija 5,60 € / Henkilökunta 9,05 € / Vierailija 12,50 €",
+              "items": [
+                "BBQ Broileri-pannupizzaa ja fetaa (A, L, VS)",
+                "Mango-sitruunashotti (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Pieni makea ihana",
+              "price": "Opiskelija 0,66€ / Henkilökunta 0,66 € / Vierailija 1,40 €",
+              "items": [
+                "Kirsikka-kaurapiirakkaa (A, L)",
+                "Vaniljakastiketta (A, G, L)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "hours": "10:30–14:30",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Opiskelija 1,46 € / Henkilökunta 4,59€ / Vierailija 4,59 €",
+              "items": [
+                "Mannapuuroa (*, A, ILM, L)",
+                "Mehukeittoa (G, L, M, Veg)",
+                "Edamjuustoa (A, G, L)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Opiskelija 1,87 € / Henkilökunta 5,03 € / Vierailija 5,03€",
+              "items": [
+                "Meksikolaista soijarouheriisi-vuokaa (*, A, L, M, Veg, VS)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Opiskelija 2,95 € / Henkilökunta 6,19 € / Vierailija 6,22€",
+              "items": [
+                "Rapeita kalapuikkoja\n (*, A, L, M)",
+                "Tartarjogurttia\n (*, A, G, L)",
+                "Perunamuusia (*, A, G, ILM, L)"
+              ]
+            },
+            {
+              "name": "Annosruoka",
+              "price": "Opiskelija 5,60 € / Henkilökunta 9,05 € / Vierailija 12,50 €",
+              "items": [
+                "Vegeburgeri ja vegaanista \"ricottaa\" (A, ILM, L, M, Veg)",
+                "Maalaisranskalaisia (G, L, M, Veg)",
+                "Parmesanmajoneesia (A, L)",
+                "Mango-sitruunashotti (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Pieni makea ihana",
+              "price": "Opiskelija 0,66€ / Henkilökunta 0,66 € / Vierailija 1,40 €",
+              "items": [
+                "Suklaamoussea, kinuskia ja pähkinää (A, G, L)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-06",
+          "hours": "10:30–14:00",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Opiskelija 1,46 € / Henkilökunta 4,59€ / Vierailija 4,59 €",
+              "items": [
+                "Linssikeittoa Thai Style (*, G, ILM, L, M, Veg, VS)",
+                "Paahdettuja siemeniä (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Opiskelija 1,87 € / Henkilökunta 5,03 € / Vierailija 5,03€",
+              "items": [
+                "Pinaattiohukaisia (*, A, ILM, L)",
+                "Hillottua puolukkaa (G, L, M, Veg)",
+                "Paahdettua perunaa (*, G, ILM, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Opiskelija 2,95 € / Henkilökunta 6,19 € / Vierailija 6,22 €",
+              "items": [
+                "Fenkolilla ja basilikalla maustettua broileripastaa\n (*, A, L)"
+              ]
+            },
+            {
+              "name": "Annosruoka",
+              "price": "Opiskelija 5,60 € / Henkilökunta 9,05 € / Vierailija 12,50 €",
+              "items": [
+                "Porsaan grillipihvi (*, G, L, M)",
+                "Tummaa piparjuurikastiketta (A, G, L, M)",
+                "Paahdettua perunaa (*, G, ILM, L, M, Veg)",
+                "Satokauden kasviksia (G, L, M, Veg)",
+                "Mango-sitruunashotti (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Pieni makea ihana",
+              "price": "Opiskelija 0,66€ / Henkilökunta 0,66 € / Vierailija 1,40 €",
+              "items": [
+                "Banaanirahkaa (A, G, L)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-07",
+          "hours": "11:00–13:30",
+          "menus": [
+            {
+              "name": "Kasviskeitto",
+              "price": "Opiskelija 1,46 € / Henkilökunta 4,59€ / Vierailija 4,59 €",
+              "items": [
+                "Juustoista juuressosekeittoa (*, A, G, ILM, L)",
+                "Paahdettuja siemeniä (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kasvislounas",
+              "price": "Opiskelija 1,87 € / Henkilökunta 5,03 € / Vierailija 5,03€",
+              "items": [
+                "Linssi-kasvislasagnea (*, A, ILM, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Kotiruokalounas",
+              "price": "Opiskelija 2,95 € / Henkilökunta 6,19 € / Vierailija 6,22 €",
+              "items": [
+                "Chilillä maustettua jauhelihapataa\n (*, A, L, M)",
+                "Paahdettua perunaa (*, G, ILM, L, M, Veg)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-08",
           "hours": null,
           "menus": []
         }
@@ -44,12 +549,245 @@ window.MENUS = {
       "url": "https://www.compass-group.fi/ravintolat-ja-ruokalistat/foodco/kaupungit/kuopio/tietoteknia/",
       "days": [
         {
-          "date": "2026-10-31",
+          "date": "2026-11-02",
+          "hours": "10:30–14:00",
+          "menus": [
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk.3,10 €",
+              "items": [
+                "Currylla maustettuja kukkakaalipyöryköitä - Aloo Gobi  (G, ILM, L, M, Veg, VS)",
+                "Paahdettua perunaa (*, G, ILM, L, M, Veg)",
+                "Ruohosipulijogurttia (*, A, G, ILM, L)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk. 3,10 €",
+              "items": [
+                "Chilillä maustettua jauhelihapataa\n (*, A, L, M)",
+                "Paahdettua perunaa (*, G, ILM, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk. 3,10€",
+              "items": [
+                "Kalamurekepihvejä (*, A, G, ILM, L, M)",
+                "Perunamuusia (*, A, G, ILM, L)",
+                "Ruohosipulijogurttia (*, A, G, ILM, L)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30 €",
+              "items": [
+                "Rapeaa kanaa korealaisittain - Chicken Gochujang (A, L, M)",
+                "Limemajoneesia (A, G, L)"
+              ]
+            },
+            {
+              "name": "JÄLKKÄRI",
+              "price": "Opisk. 1,80€",
+              "items": [
+                "Vaahtokarkkirahkaa & kinuskia (A, G, L)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-03",
+          "hours": "10:30–14:00",
+          "menus": [
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk.3,10 €",
+              "items": [
+                "Linssi-kasvislasagnea (*, A, ILM, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk. 3,10 €",
+              "items": [
+                "Broileria currykastikkeessa (*, A, G, L)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk. 3,10€",
+              "items": [
+                "Pekoni-juustokuorrutettua uunimakkaraa (A, G, L)",
+                "Perunamuusia (*, A, G, ILM, L)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30 €",
+              "items": [
+                "Broilericaesartäytteistä pannuleipää (A, L, VS)"
+              ]
+            },
+            {
+              "name": "JÄLKKÄRI",
+              "price": "Opisk. 1,80€",
+              "items": [
+                "Passionpannacottaa (A, G, L)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-04",
+          "hours": "10:30–14:00",
+          "menus": [
+            {
+              "name": "PÄIVÄN SOPPA",
+              "price": "11,00€ / opisk. 3,10€",
+              "items": [
+                "Sipulikeittoa, krutonkeja ja juustoa\n (*, A, ILM, L)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk.3,10 €",
+              "items": [
+                "Tofua vihreässä currykastikkeessa - Luomutofu Green Curry (*, A, G, ILM, L, M, Veg, VS)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk. 3,10 €",
+              "items": [
+                "Kylmäsavukirjolohikiusausta (*, A, G, ILM, L)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk. 3,10€",
+              "items": [
+                "Jauhelihakebakoita (A, L, M)",
+                "Paahdettua perunaa (*, G, ILM, L, M, Veg)",
+                "Chili-kermaviilikastiketta (A, G, L)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30 €",
+              "items": [
+                "Porsaan grillipihvi (*, G, L, M)",
+                "Tummaa piparjuurikastiketta (A, G, L, M)"
+              ]
+            },
+            {
+              "name": "JÄLKKÄRI",
+              "price": "Opisk. 1,80€",
+              "items": [
+                "Kirsikka-kaurapiirakkaa (A, L)",
+                "Vaniljakastiketta (A, G, L)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-05",
+          "hours": "10:30–14:00",
+          "menus": [
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk.3,10 €",
+              "items": [
+                "Pennepastaa, vuohenjuustoa ja tomaattia (*, A, ILM, L, VS)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk. 3,10 €",
+              "items": [
+                "Jauheliha-pastavuokaa (*, A, L)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk. 3,10€",
+              "items": [
+                "Tandoorikanaa jogurttikastikkeessa (*, A, G, L)",
+                "Tummaa riisiä (*, G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30 €",
+              "items": [
+                "Kylmäsavulohipiirakkaa (A, L)"
+              ]
+            },
+            {
+              "name": "JÄLKKÄRI",
+              "price": "Opisk. 1,80€",
+              "items": [
+                "Mariannetrifle ja kiiviä (A, L, Veg)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-06",
+          "hours": "10:30–14:00",
+          "menus": [
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk.3,10 €",
+              "items": [
+                "Pinaattiohukaisia (*, A, ILM, L)",
+                "Perunamuusia (*, A, G, ILM, L)",
+                "Hillottua puolukkaa (G, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk. 3,10 €",
+              "items": [
+                "Savustetulla paprikalla maustettua makkarapataa\n (*, A, G, L, M, VS)",
+                "Perunamuusia (*, A, G, ILM, L)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30€ / opisk. 3,10€",
+              "items": [
+                "Rapeita kalapuikkoja\n (*, A, L, M)",
+                "Perunamuusia (*, A, G, ILM, L)",
+                "Tartarjogurttia\n (*, A, G, L)"
+              ]
+            },
+            {
+              "name": "LOUNAS BUFFA",
+              "price": "13,30 €",
+              "items": [
+                "Wallenbergin pihvi (A, L)",
+                "Pikkelöity kyssäkaali (G, L, M, Veg)",
+                "Piparjuurimajoneesia (A, G, L)"
+              ]
+            },
+            {
+              "name": "JÄLKKÄRI",
+              "price": "Opisk. 1,80€",
+              "items": [
+                "Hedelmäsalaattia (G, L, M, Veg)"
+              ]
+            }
+          ]
+        },
+        {
+          "date": "2026-11-07",
           "hours": null,
           "menus": []
         },
         {
-          "date": "2026-11-01",
+          "date": "2026-11-08",
           "hours": null,
           "menus": []
         }
