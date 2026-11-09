@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-11-09T03:41:01Z",
+  "updated": "2026-11-09T16:57:08Z",
   "restaurants": [
     {
       "id": "0436",
@@ -69,7 +69,7 @@ window.MENUS = {
               "name": "Kasvislounas",
               "price": "Op 1,87 € / Hk 5,03€ / Vieras 5,03€",
               "items": [
-                "Linssi-kasvislasagnea (*, A, ILM, L, M, Veg)"
+                "Linssi-kasvislasagnettea (*, A, ILM, L, M, Veg)"
               ]
             },
             {
@@ -113,7 +113,7 @@ window.MENUS = {
               "name": "Erikoisannos",
               "price": "Op 4,67€ / Hk 8,05€ / Vieras 8,05€",
               "items": [
-                "Kookos-currykastikkeessa haudutettua lohta (A, G, L, M, VS)"
+                "Kookos-currykastikkeessa haudutettua broileria ()"
               ]
             },
             {
@@ -123,6 +123,37 @@ window.MENUS = {
                 "Falafel Hot Dog ja chimichurria (A, L, M, Veg, VS)",
                 "Maalaislohkoperunoita (G, ILM, L, M, Veg)",
                 "Srirachamajoneesia (A, G, ILM, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Teemalounas",
+              "price": "Op 2,95€ / Hk 6,19€ / Vieras 6,22€",
+              "items": [
+                "Katkarapu-jalapenopataa (*, A, G, L, VS)",
+                "Pico De Gallo -salsaa (*, G, ILM, L, M, Veg, VS)"
+              ]
+            },
+            {
+              "name": "Pieni ihana makea, teemalounas",
+              "price": "Op 0,66€ /Hk 0,66€ /Vieras 1,40€",
+              "items": [
+                "Banaanikakkua (A, L, M)",
+                "Kanelikermavaahtoa (A, G, L)"
+              ]
+            },
+            {
+              "name": "Teemalounas ",
+              "price": "Op 1,46€ / Hk 4,59€ /Vieras 4,59€",
+              "items": [
+                "Kukkakaali-herkkusienikeittoa (*, A, G, ILM, L, M, Veg)"
+              ]
+            },
+            {
+              "name": "Teemalounas",
+              "price": "Op 1,87€ / Hk 5,03€ / Vieras 5,03€",
+              "items": [
+                "Bataatti-kookoscurrya (*, A, ILM, L, M, Veg, VS)",
+                "Paahdettuja chili-kardemummaperunoita (*, A, G, ILM, L, M, Veg, VS)"
               ]
             }
           ]
