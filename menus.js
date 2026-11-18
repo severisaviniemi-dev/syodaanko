@@ -1,5 +1,5 @@
 window.MENUS = {
-  "updated": "2026-11-17T11:18:00Z",
+  "updated": "2026-11-18T10:50:07Z",
   "restaurants": [
     {
       "id": "0436",
@@ -7,60 +7,6 @@ window.MENUS = {
       "campus": "Yliopistonranta",
       "url": "https://www.compass-group.fi/ravintolat-ja-ruokalistat/foodco/kaupungit/kuopio/ita-suomen-yliopistocanthia/",
       "days": [
-        {
-          "date": "2026-11-17",
-          "hours": "10:30–14:30",
-          "menus": [
-            {
-              "name": "Kasviskeitto",
-              "price": "Op 1,46 € / Hk 4,59 € / Vieras 4,59€",
-              "items": [
-                "Bataattikeittoa (*, A, G, L)",
-                "Paahdettuja siemeniä (G, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "Kasvislounas",
-              "price": "Op 1,87 € / Hk 5,03€ / Vieras 5,03€",
-              "items": [
-                "Vehnätortillat (A, L, M, Veg)",
-                "Mausteista paputäytettä (*, A, ILM, L, M, Veg, VS)"
-              ]
-            },
-            {
-              "name": "Kotiruokalounas",
-              "price": "Op 2,95 € / Hk 6,19€ / Vieras 6,22€",
-              "items": [
-                "Perinteistä jauhelihakastiketta (*, A, L, M)",
-                "Keitettyjä perunoita (*, A, G, ILM, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "Erikoisannos",
-              "price": "Op 4,67€ / Hk 8,05€ / Vieras 8,05€",
-              "items": [
-                "Chicken & Chips (A, G, L, M)"
-              ]
-            },
-            {
-              "name": "Pieni makea ihanuus",
-              "price": "Op 0,66 € / Hk 0,66€ / Vieras 1,40 €",
-              "items": [
-                "Omena-kauramurupaistosta (A, L, M, Veg)",
-                "Vegaanista vaniljakastiketta (A, G, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "Wicked Rabbit kasvisbuffa",
-              "price": "Op 5,60 € / Hk 9,50€ / Vieras 12,50€",
-              "items": [
-                "Halloumi-kukkakaalikormaa ja pikkelöityä chiliä (A, G, VS)",
-                "Kurkumariisiä (G, L, M, Veg)",
-                "Jogurttia (A, G, ILM, L)"
-              ]
-            }
-          ]
-        },
         {
           "date": "2026-11-18",
           "hours": "10:30–14:30",
@@ -225,60 +171,6 @@ window.MENUS = {
       "campus": "Yliopistonranta",
       "url": "https://www.compass-group.fi/ravintolat-ja-ruokalistat/foodco/kaupungit/kuopio/ita-suomen-yliopistosnellmania/",
       "days": [
-        {
-          "date": "2026-11-17",
-          "hours": "10:30–14:30",
-          "menus": [
-            {
-              "name": "Kasviskeitto",
-              "price": "Opiskelija 1,46 € / Henkilökunta 4,59€ / Vierailija 4,59 €",
-              "items": [
-                "Yrttistä porkkanasosekeittoa\n (*, A, G, ILM, L)",
-                "Paahdettuja siemeniä (G, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "Kasvislounas",
-              "price": "Opiskelija 1,87 € / Henkilökunta 5,03 € / Vierailija 5,03€",
-              "items": [
-                "Tofua ja herneita mausteisessa kastikkeessa - Tofu Matar Paneer (*, A, G, ILM, L, M, Veg)",
-                "Tummaa riisiä (*, G, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "Kotiruokalounas",
-              "price": "Opiskelija 2,95 € / Henkilökunta 6,19 € / Vierailija 6,22€",
-              "items": [
-                "Jauhelihakebakoita (A, L, M)",
-                "Chili-kermaviilikastiketta (A, G, L)",
-                "Paahdettua perunaa (*, G, ILM, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "Keittolounas",
-              "price": "Opiskelija 2,95 € / Henkilökunta 6,19 € / Vierailija 6,22€",
-              "items": [
-                "Täyteläistä kirjolohikeittoa (*, A, G, ILM, L)"
-              ]
-            },
-            {
-              "name": "Annosruoka",
-              "price": "Opiskelija 5,60 € / Henkilökunta 9,05 € / Vierailija 12,50 €",
-              "items": [
-                "Chicken & Chips (A, G, L, M)",
-                "Appelsiini-porkkana-kurkumashotti (G, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "Pieni makea ihana",
-              "price": "Opiskelija 0,66€ / Henkilökunta 0,66 € / Vierailija 1,40 €",
-              "items": [
-                "Omena-puolukkapiirakkaa (A, L, M)",
-                "Kinuskikermavaahtoa (A, G, L)"
-              ]
-            }
-          ]
-        },
         {
           "date": "2026-11-18",
           "hours": "10:30–14:30",
@@ -468,49 +360,6 @@ window.MENUS = {
       "campus": "Yliopistonranta",
       "url": "https://www.compass-group.fi/ravintolat-ja-ruokalistat/foodco/kaupungit/kuopio/tietoteknia/",
       "days": [
-        {
-          "date": "2026-11-17",
-          "hours": "10:30–14:00",
-          "menus": [
-            {
-              "name": "LOUNAS BUFFA",
-              "price": "13,30€ / opisk.3,10 €",
-              "items": [
-                "Kasvislasagnette (A, L, VS)"
-              ]
-            },
-            {
-              "name": "LOUNAS BUFFA",
-              "price": "13,30€ / opisk. 3,10 €",
-              "items": [
-                "Mausteista broileripataa - Broileripataa Mexicali (*, A, L, M, VS)",
-                "Tummaa riisiä (*, G, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "LOUNAS BUFFA",
-              "price": "13,30€ / opisk. 3,10€",
-              "items": [
-                "Lihamureketta ja sinappista kastiketta (A, G, L)",
-                "Paahdettua perunaa (*, G, ILM, L, M, Veg)"
-              ]
-            },
-            {
-              "name": "LOUNAS BUFFA",
-              "price": "13,30 €",
-              "items": [
-                "Puna-ahventa ja sitruuna-smetanakastiketta\n (A, G, L)"
-              ]
-            },
-            {
-              "name": "JÄLKKÄRI",
-              "price": "Opisk. 1,80€",
-              "items": [
-                "Toscapiirakkaa (A, L)"
-              ]
-            }
-          ]
-        },
         {
           "date": "2026-11-18",
           "hours": "10:30–14:00",
